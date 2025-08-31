@@ -1,7 +1,12 @@
+import Link from "next/link"
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <>
+      <h1>Home Page !</h1>
+      <Link href="/blog">Blog Page</Link>
+      <Link href="/products">Products Page</Link>
+    </>
   )
 }
 

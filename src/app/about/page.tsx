@@ -1,3 +1,6 @@
+export const metadata = {
+  title: 'About Nana Portfolio'
+}
 
 const About = () => {
   return (

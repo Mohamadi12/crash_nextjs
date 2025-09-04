@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 function getRandomInt(count: number) {
   return Math.floor(Math.random() * count);
@@ -16,7 +16,7 @@ export default async function ProductReview({
 
   const { reviewId, productId } = await params;
   if (parseInt(reviewId) > 100) {
-    redirect("/products");
+    notFound()
   }
 
   return (

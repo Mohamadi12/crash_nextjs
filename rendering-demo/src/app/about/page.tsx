@@ -1,7 +1,7 @@
 
 const AboutPage = () => {
   return (
-    <div>About page</div>
+    <div>About page {new Date().toLocaleDateString()}</div>
   )
 }
 

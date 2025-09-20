@@ -1,4 +1,5 @@
 import { getProducts } from "@/prisma-db";
+import Link from "next/link";
 
 export type Product = {
   id: number;
@@ -17,7 +18,9 @@ export default async function ProductsDBPage() {
           key={product.id}
           className="p-4 bg-white shadow-md rounded-lg text-gray-700"
         >
-          <div className="text-xl font-semibold">{product.title}</div>
+          <h2 className="text-xl font-semibold">
+            <Link href={`/products-db/${product.id}`}>{product.title}</Link>
+          </h2>
           <p>Price: ${product.price}</p>
           <p>Description: {product.description}</p>
         </li>
